@@ -198,9 +198,9 @@ public class ErrorActivity extends AppCompatActivity {
             actionBar.setDisplayShowTitleEnabled(true);
         }
 
-        final Button reportEmailButton = findViewById(R.id.errorReportEmailButton);
+        //final Button reportEmailButton = findViewById(R.id.errorReportEmailButton);
         final Button copyButton = findViewById(R.id.errorReportCopyButton);
-        final Button reportGithubButton = findViewById(R.id.errorReportGitHubButton);
+        //final Button reportGithubButton = findViewById(R.id.errorReportGitHubButton);
 
         userCommentBox = findViewById(R.id.errorCommentBox);
         TextView errorView = findViewById(R.id.errorView);
@@ -215,20 +215,20 @@ public class ErrorActivity extends AppCompatActivity {
         // important add guru meditation
         addGuruMeditation();
         currentTimeStamp = getCurrentTimeStamp();
-
+        /*
         reportEmailButton.setOnClickListener((View v) -> {
             openPrivacyPolicyDialog(this, "EMAIL");
         });
-
+        */
         copyButton.setOnClickListener((View v) -> {
             ShareUtils.copyToClipboard(this, buildMarkdown());
             Toast.makeText(this, R.string.msg_copied, Toast.LENGTH_SHORT).show();
         });
-
+        /*
         reportGithubButton.setOnClickListener((View v) -> {
             openPrivacyPolicyDialog(this, "GITHUB");
         });
-
+        */
         // normal bugreport
         buildInfo(errorInfo);
         if (errorInfo.message != 0) {

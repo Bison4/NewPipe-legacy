@@ -100,7 +100,7 @@ public class App extends Application {
         configureRxJavaErrorHandler();
 
         // Check for new version
-        new CheckForNewAppVersionTask().execute();
+        //new CheckForNewAppVersionTask().execute();
     }
 
     protected Downloader getDownloader() {
